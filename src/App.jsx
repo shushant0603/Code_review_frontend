@@ -10,7 +10,9 @@ import './App.css'
 
 function App() {
   const [ count, setCount ] = useState(0)
-  const [ code, setCode ] = useState("")
+  const [ code, setCode ] = useState(` function sum() {
+  return 1 + 1
+}`)
 
   const [ review, setReview ] = useState(``)
 
@@ -33,7 +35,6 @@ function App() {
               onValueChange={code => setCode(code)}
               highlight={code => prism.highlight(code, prism.languages.javascript, "javascript")}
               padding={10}
-              placeholder='Search place here'
               style={{
                 fontFamily: '"Fira code", "Fira Mono", monospace',
                 fontSize: 16,
